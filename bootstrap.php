@@ -15,3 +15,19 @@ use TightenCo\Jigsaw\Jigsaw;
  *     // Your code here
  * });
  */
+
+ $events->beforeBuild(function (Jigsaw $jigsaw) {
+    // your code here
+    echo 'beforeBuild aaaaaaaaaaaaa';
+    echo $jigsaw.getEnvironment();
+ });
+ 
+ $events->afterCollections(function ($jigsaw) {
+    // your code here
+    echo 'afterCollections aaaaaaaaaaaaa';
+ });
+ 
+ $events->afterBuild(function ($jigsaw) {
+    // your code here
+    echo 'afterBuild aaaaaaaaaaaaa';
+ });
